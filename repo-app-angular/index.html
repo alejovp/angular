@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="repoApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Repos App</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container" ng-controller="mySearchController">
+      <div class="jumbotron" >
+        <div class="container">
+          <h1>Type for a quick search...</h1>
+          <input type="text" ng-model="query">
+          <select name="" id="" ng-model="customerOrder">
+            <option value="name">Name</option>
+            <option value="github">GitHub</option>
+            <option value="mail">Email</option>
+          </select>
+          
+        </div>
+      </div>
+      <ul>
+        <li ng-repeat="student in students | filter: query | orderBy: customerOrder">Nombre: {{student.name}} gitHub: {{student.github}} Email: {{student.mail}}</li>
+      </ul>
+      
+    </div>
+  <script src="app.js"></script>
+</body>
+</html>

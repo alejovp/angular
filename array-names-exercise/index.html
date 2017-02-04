@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="arrayApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+<body>
+  <div ng-controller="arrayController">
+    <input type="text" ng-model="userInput">
+    <button ng-click="addName(userInput)">Add</button>
+    <ul>
+      <li ng-repeat="student in students">{{student}} <a href="#" ng-click="deleteName(student)">[delete]</a></li>
+    </ul>
+  </div>
+<script src="js/arrayApp.js"></script>
+</body>
+</html>
